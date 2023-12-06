@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Transaction Analysis</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+
+    <h1>Secured Transaction Analysis</h1>
+
+    <form id="securedTransactionForm">
+        <!-- Input fields for Party 1 -->
+        <label for="party1_name">Party 1 Name:</label>
+        <input type="text" id="party1_name" name="party1_name" required>
+        <label for="party1_agreement_date">Party 1 Agreement Date:</label>
+        <input type="date" id="party1_agreement_date" name="party1_agreement_date" required>
+        <label for="party1_has_financial_statement">Party 1 has Financial Statement:</label>
+        <input type="checkbox" id="party1_has_financial_statement" name="party1_has_financial_statement">
+
+        <!-- Input fields for Party 2 -->
+        <label for="party2_name">Party 2 Name:</label>
+        <input type="text" id="party2_name" name="party2_name" required>
+        <label for="party2_agreement_date">Party 2 Agreement Date:</label>
+        <input type="date" id="party2_agreement_date" name="party2_agreement_date" required>
+        <label for="party2_has_financial_statement">Party 2 has Financial Statement:</label>
+        <input type="checkbox" id="party2_has_financial_statement" name="party2_has_financial_statement">
+
+        <!-- Add more input fields for other party details -->
+
+        <button type="button" onclick="analyzeSecuredTransaction()">Analyze</button>
+    </form>
+
+    <div id="resultSection"></div>
+
+    <script>
+        function analyzeSecuredTransaction() {
+            // Get input values
+            var party1Name = document.getElementById("party1_name").value;
+            var party1AgreementDate = document.getElementById("party1_agreement_date").value;
+            var party1HasFinancialStatement = document.getElementById("party1_has_financial_statement").checked;
+
+            var party2Name = document.getElementById("party2_name").value;
+            var party2AgreementDate = document.getElementById("party2_agreement_date").value;
+            var party2HasFinancialStatement = document.getElementById("party2_has_financial_statement").checked;
+
+            // Implement your secured transaction analysis logic here
+            var analysisResult = "Analysis result will be displayed here.";
+
+            // Display the result
+            var resultSection = document.getElementById("resultSection");
+            resultSection.innerHTML = "<h2>Analysis Result</h2><p>" + analysisResult
